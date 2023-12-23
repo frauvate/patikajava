@@ -3,15 +3,17 @@ import java.util.Scanner;
 
 public class TekSayiToplam {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("sayi giriniz:");
-        int sayi = input.nextInt();
+        System.out.print("bir sayi girin: ");
+        int sayi = scanner.nextInt();
 
-        for( int i=0 ; i<=sayi ; i++ ) {
-            if(sayi%2!=0) {
-               int toplam = toplam + i;
-            }
-        } System.out.println("girilen sayiyiya kadar olan tek sayilarin toplami:" + toplam);
+        int toplam = 0;
+
+        for (int i = 1; i <= sayi; i += 2) {
+            toplam += i;
+        }
+
+        System.out.println("1'den " + sayi + " kadar olan tek sayilarin toplami: " + toplam);
     }
 }
