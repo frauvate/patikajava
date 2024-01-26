@@ -1,88 +1,105 @@
-package chapterone;
 import java.util.Scanner;
 
 public class StarSign {
     public static void main(String[] args) {
-        Scanner input = new scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.print("enter your birth month(all lower case):")
-        String month = input.nextline();
+        System.out.print("enter your birth month(with numbers):");
+        int month = input.nextInt();
         System.out.print("enter your birth day:");
         int day = input.nextInt();
+        if(day<0 || day>31) {
+            System.out.println("date invalid");
+        }
 
         switch (month) {
-            case january:
+            case 1:
                 if(day<=21) {
                     System.out.println("your star sign is capricorn");
                 } else {
                     System.out.println("your star sign is aquarius");
                 }
-            case february:
+                break;
+            case 2:
                 if(day<=19) {
                     System.out.println("your star sign is aquarius");
                 } else {
-                    System.ot.println("your star sign is pisces");
+                    System.out.println("your star sign is pisces");
                 }
-            case march:
+                break;
+            case 3:
                 if(day<=20) {
                     System.out.println("your star sign is pisces");
                 } else {
                     System.out.println("your star sign is aries");
                 }
-            case april:
+                break;
+            case 4:
                 if(day<=20) {
                     System.out.println("your star sign is aries");
                 } else {
                     System.out.println("your star sign is taurus");
                 }
-            case may:
+                break;
+            case 5:
                 if(day<=21) {
                     System.out.println("your star sign is taurus");
                 } else {
                     System.out.println("your star sign is gemini");
                 }
-            case june:
+                break;
+            case 6:
                 if(day<=22) {
                     System.out.println("your star sign is gemini");
                 } else {
                     System.out.println("your star sign is cancer");
                 }
-            case july:
+                break;
+            case 7:
                 if(day<=22) {
                     System.out.println("your star sign is cancer");
                 } else {
                     System.out.println("your star sign is leo");
                 }
-            case august:
+                break;
+            case 8:
                 if(day<=22) {
                     System.out.println("your star sign is leo");
                 } else {
-                    System.out.println("your star sign is ")
+                    System.out.println("your star sign is virgo");
                 }
-            case september:
+                break;
+            case 9:
                 if(day<=22) {
                     System.out.println("your star sign is virgo");
                 } else {
-                    System.out.println("your star sign is libra")
+                    System.out.println("your star sign is libra");
                 }
-            case october:
+                break;
+            case 10:
                 if(day<=22) {
                     System.out.println("your star sign is libra");
                 } else {
                     System.out.println("your star sign is scorpio");
                 }
-            case november:
+                break;
+            case 11:
                 if(day<=21) {
                     System.out.println("your star sign is scorpio");
                 } else {
                     System.out.println("your star sign is sagittarius");
                 }
-            case december:
+                break;
+            case 12:
                 if(day<=21) {
-                    System.out.println("your star sign is dagittarius");
+                    System.out.println("your star sign is sagittarius");
                 } else {
                     System.out.println("your star sign is capricorn");
                 }
+                break;
+            default:
+            System.out.println("date invalid");
+            break;
         }
     }
 }
